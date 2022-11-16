@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+	<style>
+
+	</style>
+	<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="content">
+
+	</div>
+
+<script type="module">
+	   import {FormulaEditor} from "./formulaEditor.mjs";
+
+	   let content = document.getElementById("content");
+
+	   let formulaEditor = new FormulaEditor(content);
+	   let parent = window.parent;
+	   window.onmessage = (event) => {
+		   let data = event.data;
+
+		   let actionRes = formulaEditor[data.method](...data.args);
+
+		   if (event.data.needReturn) {
+			   parent.postMessage({'id': event.data.id, actionRes}, '*');
+		   } else {
+			   parent.postMessage({'id': event.data.id, actionRes: true}, '*');
+		   }
+
+	   }
+
+</script>
+</body>
+</html>

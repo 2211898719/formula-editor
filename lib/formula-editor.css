@@ -1,0 +1,116 @@
+@import "modules/mathquill-basic.css";
+
+.formula-editor {
+    display: flex;
+    position: relative;
+    flex: 1 0 auto;
+    font-size: 1.5rem;
+    min-height: 96px;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 4px;
+    overflow: visible;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+#formula-editor__math-field {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    border: none;
+    box-shadow: none;
+}
+
+.formula-editor__hard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    background-color: rgb(242, 242, 242);
+    margin: 16px 0;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 6px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formula-editor__buttons {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(242, 242, 242);
+    margin: 0 4px;
+}
+
+.formula-editor__buttons__button {
+    background-color: rgb(255, 255, 255);
+    width: 48px;
+    height: 48px;
+    box-shadow: rgb(0 0 0 / 20%) 0 -4px 0 0 inset;
+    font-size: 2rem;
+    margin: 4px;
+    padding: 0;
+    border-radius: 4px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: Symbola, "Times New Roman", serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.formula-editor__buttons__button:hover {
+    background-color: rgb(204, 204, 204);
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.formula-editor__buttons__button__label {
+    vertical-align: baseline;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.formula-editor__body {
+    flex: 1 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(242, 242, 242);
+    border-radius: 4px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 6px;
+    box-sizing: border-box;
+
+}
+
+.formula-editor__body__buttons {
+    width: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    background-color: rgb(242, 242, 242);
+}
+
+.formula-editor__body__buttons button svg path {
+    fill: currentColor !important;
+}
+
