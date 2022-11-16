@@ -1,6 +1,7 @@
 # formula editor
 
 一款网页数学公式编辑器，基于mathquill.js封装，更便于开发者使用
+[预览地址]([demo.html](https://2211898719.github.io/formula-editor/))
 ![image](https://user-images.githubusercontent.com/77563386/202101276-e97b727f-7209-48d8-936e-efe29c63fddb.png)
 
 # Demo
